@@ -1,0 +1,217 @@
+@import url('styles/vars.css');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.125em; 
+}
+
+*:focus {
+   
+    outline: 0.5em solid rgb(255, 17, 0);
+    outline-offset: 0.125em;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5dc;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+
+    background-image: url("img-menu/op-fundo2.jpg");
+    overflow-x: hidden; 
+    overflow-y: auto; 
+}
+
+
+header {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;     
+    width: 100%;
+    font: var(--font-size-large);
+}
+
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;       
+    width: 100%;
+   
+    text-shadow: #9a0af3 0.125em 0.125em 0.3125em;
+    font: var(--font-size-large);
+}
+
+
+.container-principal {
+    position: relative;
+    overflow: hidden;
+
+    
+    width: 100%;
+   
+    height: 75vh;
+
+    
+    margin: 1.25em 0;   
+
+    display: flex;
+   
+    border-radius: 0.625em;
+}
+
+.container-principal:focus {
+
+    outline: 0.5em solid rgb(255, 17, 0);
+    outline-offset: 0.625em;
+}
+
+
+.conteiner-externo {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+   
+    width: 20%;
+    height: 100%;
+
+    animation: paraDireita 25s linear infinite, brilho 2s infinite alternate;
+
+    background-color: rgb(66, 107, 93);
+    
+    border-radius: 0.625em;
+}
+
+
+.conteiner-superior {
+    flex: 5;
+  
+    border-radius: 0.625em;
+}
+
+.conteiner-superior img {
+    display: block;
+   
+    border-radius: 0.625em;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conteiner-superior img:focus {
+    
+    outline: 0.5em solid rgb(4, 0, 255);
+    outline-offset: 0.125em;
+}
+
+
+.conteiner-inferior {
+    flex: 1;
+    display: flex;
+    background-color: var(--primary-color);
+    
+    border-radius: 0.625em;
+
+    padding: 1.25em;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.titulo-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+
+    
+    font-size: 1.4em;
+
+    font-family: Garamond;
+}
+
+.titulo-link:hover {
+    color: var(--secondary-color);
+}
+
+
+@keyframes brilho {
+   
+    20% {
+        box-shadow: 0 0 0.625em rgba(227, 49, 215, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 2.5em rgba(245, 69, 245, 0.8);
+    }
+}
+
+
+@keyframes paraDireita {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100vw); 
+    }
+}
+
+
+.conteiner-externo:nth-child(1) {
+    animation-delay: 16.66s;
+}
+.conteiner-externo:nth-child(2) {
+    animation-delay: 8.33s;
+}
+.conteiner-externo:nth-child(3) {
+    animation-delay: 0s;
+}
+
+
+@media (max-width: 600px) {
+    .container-principal {
+        justify-content: space-around;
+        height: 50vh;
+        flex-direction: row;
+    }
+
+    .conteiner-externo {
+        
+        width: 30%;
+        height: 100%;
+        animation: none;
+        position: static;
+    }
+
+    
+    .titulo-link {
+        font-size: 1.2em;
+    }
+
+    .footer-icons {
+        
+        display: flex;
+        justify-content: center;
+        gap: 0.625em;
+        margin-top: 0.625em;
+    }
+
+    .footer-icons a svg {
+        
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    .footer-icons a:hover svg {
+        transform: scale(1.1);
+    }
+}
