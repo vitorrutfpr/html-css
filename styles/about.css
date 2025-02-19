@@ -1,0 +1,63 @@
+@import url('vars.css');
+
+.about-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about-title {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.member {
+    background: var(--white-color);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    width: 250px;
+    padding: 20px;
+}
+
+.member-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid var(--primary-color); 
+}
+
+.member-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.member-sns {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icon {
+    text-decoration: none;
+    font-size: 20px;
+    color: #0077B5;
+    transition: 0.3s;
+}
+
+.footer-icon:hover {
+    color: #005582;
+}

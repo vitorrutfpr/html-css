@@ -93,6 +93,7 @@
   padding: 1rem 2rem;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
 }
 @media screen and (max-width: 900px) {
   .artefact .image-container .image {

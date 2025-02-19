@@ -6,6 +6,15 @@
     <title>Modelos Generativos - Explicações</title>
     <link rel="stylesheet" href="styles/cards.css">
     <link rel="stylesheet" href="styles/main.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".card").forEach(card => {
+                card.addEventListener("click", function () {
+                    this.classList.toggle("flipped");
+                });
+            });
+        });
+    </script>    
 </head>
 <body>
     <header class="nav">
@@ -26,16 +35,17 @@
             <a href="./modelos-generativos-na-arte.html" class="button">
                 <span class="button-label">Algoritmo</span>
             </a>
+
+            <a href="./about-us.html" class="button">
+                <span class="button-label">Sobre Nós</span>
+            </a>
         </div>
     </header>
         
     <main>
 
         <article>
-
-            <h1 class="title">Introdução aos Modelos Generativos</h1>
             <!-- <p class="description">Entenda um pouco sobre os diferentes tipos de modelos generativos, como GANs, Transformadores, Difusão e VAE.</p> -->
-
             <div class="cards-container">
                 <div class="card">
                     <div class="card-inner">
