@@ -11,7 +11,7 @@
   top: 0;
   position: sticky;
   border-bottom: 3px solid var(--primary-color);
-  z-index: 2;
+  z-index: 20;
 }
 
 .nav .logo {
